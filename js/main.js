@@ -111,4 +111,21 @@ $(document).ready(function () {
         });
     });
 
+    // =========================================
+    // 6. Back to Top button
+    // =========================================
+    var $backToTop = $('#backToTop');
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 400) {
+            $backToTop.addClass('show');
+        } else {
+            $backToTop.removeClass('show');
+        }
+    });
+
+    $backToTop.on('click', function () {
+        $('html, body').animate({ scrollTop: 0 }, 600);
+    });
+
 });
