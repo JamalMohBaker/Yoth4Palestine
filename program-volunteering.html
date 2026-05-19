@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="YFP Volunteering System — 50-hour structured program aligned with SDGs, building professional experience and leadership.">
+    <title>Volunteering System | YFP Programs</title>
+    <link rel="icon" type="image/png" href="images/logo_without_bg.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .logo-yfp {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-bottom: 5px;
+        }
+
+        .program-hero {
+            background: linear-gradient(135deg, #1B3A6B 0%, #2a5298 100%);
+            color: #fff;
+            padding: 120px 0 80px;
+        }
+
+        .program-hero h1 {
+            color: #fff;
+            font-size: 2.8rem;
+            margin-bottom: 16px;
+        }
+
+        .program-hero .lead {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1.15rem;
+        }
+
+        .program-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .meta-item {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 12px 20px;
+            border-radius: 50px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            backdrop-filter: blur(10px);
+        }
+
+        .meta-item i {
+            color: var(--accent);
+        }
+
+        .detail-section {
+            padding: 80px 0;
+        }
+
+        .detail-section h3 {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+            position: relative;
+            padding-bottom: 12px;
+        }
+
+        .detail-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        .skill-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px;
+        }
+
+        .skill-list li {
+            padding: 14px 18px;
+            background: var(--surface);
+            border-radius: 10px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .skill-list li i {
+            color: var(--accent);
+        }
+
+        .highlight-box {
+            background: #fff8f0;
+            border-left: 4px solid var(--accent);
+            padding: 24px 28px;
+            border-radius: 0 var(--radius) var(--radius) 0;
+            margin: 28px 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+        }
+
+        .sdg-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        .sdg-item {
+            text-align: center;
+            padding: 20px 12px;
+            background: var(--surface);
+            border-radius: var(--radius);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .sdg-item .sdg-num {
+            display: block;
+            font-size: 1.8rem;
+            font-family: var(--font-heading);
+            font-weight: 900;
+            margin-bottom: 6px;
+        }
+
+        .certificate-note {
+            background: #e8f5e9;
+            border-radius: var(--radius);
+            padding: 28px 32px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .certificate-note i {
+            font-size: 2.5rem;
+            color: #2e7d32;
+            margin-bottom: 12px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 40px;
+        }
+
+        .back-link:hover {
+            color: var(--accent);
+        }
+
+        .outcome-box {
+            background: #f0f4ff;
+            border-radius: var(--radius);
+            padding: 24px 28px;
+            margin: 28px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="logo-yfp"><img src="images/logo_without_bg.png" alt="YFP Logo"></span>
+                <span class="logo-sub">Youth For Palestine</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="programs.html">Programs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="achievements.html">Achievements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
+                </ul>
+                <a href="achievements.html#support" class="btn btn-accent rounded-pill">Join Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="program-hero">
+        <div class="container">
+            <a href="programs.html" class="back-link" style="color:rgba(255,255,255,0.7)"><i
+                    class="fas fa-arrow-left"></i> Back to Programs</a>
+            <span class="section-tag" style="color:rgba(255,255,255,0.7)">Flagship Program</span>
+            <h1>Volunteering System</h1>
+            <p class="lead">A structured 50-hour volunteering experience aligned with the UN Sustainable Development
+                Goals — transforming students into ready, skilled professionals.</p>
+            <div class="program-meta">
+                <div class="meta-item"><i class="fas fa-clock"></i> 50 Hours Required</div>
+                <div class="meta-item"><i class="fas fa-calendar-alt"></i> 5 Weeks</div>
+                <div class="meta-item"><i class="fas fa-map-marker-alt"></i> Onsite &amp; Remote</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brief -->
+    <section class="detail-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h3>Program Overview</h3>
+                    <p>Our Volunteering System is a <strong>50-hour</strong> structured program spanning
+                        <strong>5 weeks</strong>, available both <strong>on-site and remotely</strong>. Volunteers are
+                        placed at the heart of our organization's mission — contributing directly to initiatives aligned
+                        with the UN Sustainable Development Goals (SDGs) that define our mandate.
+                    </p>
+                    <p>Each volunteer is assigned meaningful responsibilities, receives professional guidance, and gains
+                        real-world experience that builds the foundation for a successful career. This is not passive
+                        volunteering — it is active professional development.</p>
+
+                    <div class="highlight-box">
+                        <p><strong>Professional Transformation:</strong> After completing 50 hours, students emerge
+                            fully equipped with the skills, experience, and confidence to enter the professional world —
+                            with an enhanced CV supported by our global ambassador network.</p>
+                    </div>
+
+                    <h3 class="mt-5">SDG Focus Areas</h3>
+                    <p>Our volunteering efforts are aligned with the Sustainable Development Goals that guide our
+                        organization's mandate:</p>
+                    <div class="sdg-grid">
+                        <div class="sdg-item">
+                            <span class="sdg-num" style="color:#C5192D">SDG 4</span>
+                            Quality Education
+                        </div>
+                        <div class="sdg-item">
+                            <span class="sdg-num" style="color:#A21942">SDG 8</span>
+                            Decent Work &amp; Growth
+                        </div>
+                        <div class="sdg-item">
+                            <span class="sdg-num" style="color:#19486A">SDG 17</span>
+                            Partnerships
+                        </div>
+                    </div>
+
+                    <h3 class="mt-5">What You Will Gain</h3>
+                    <ul class="skill-list">
+                        <li><i class="fas fa-check-circle"></i> Professional Work Experience</li>
+                        <li><i class="fas fa-check-circle"></i> Leadership &amp; Responsibility</li>
+                        <li><i class="fas fa-check-circle"></i> CV Enhancement</li>
+                        <li><i class="fas fa-check-circle"></i> SDG-Aligned Project Experience</li>
+                        <li><i class="fas fa-check-circle"></i> Mentorship &amp; Guidance</li>
+                        <li><i class="fas fa-check-circle"></i> Networking with NGOs &amp; INGOs</li>
+                        <li><i class="fas fa-check-circle"></i> Ambassador Network Access</li>
+                        <li><i class="fas fa-check-circle"></i> Career Readiness</li>
+                    </ul>
+
+                    <div class="outcome-box mt-4">
+                        <h5 style="color:var(--primary)">The Outcome</h5>
+                        <p style="margin-bottom:0">Upon completion, volunteers are transformed — they possess all the
+                            necessary skills, hands-on experience, and a professionally enhanced CV. Through our
+                            ambassador network, they gain visibility and access to opportunities that launch their
+                            professional careers.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card p-4 shadow-sm" style="border-radius:var(--radius);position:sticky;top:100px;">
+                        <h5 style="color:var(--primary)">Quick Facts</h5>
+                        <hr>
+                        <p><strong><i class="fas fa-clock me-2" style="color:var(--accent)"></i>Hours:</strong> 50
+                            Required</p>
+                        <p><strong><i class="fas fa-calendar-alt me-2"
+                                    style="color:var(--accent)"></i>Duration:</strong>
+                            5 Weeks</p>
+                        <p><strong><i class="fas fa-map-marker-alt me-2" style="color:var(--accent)"></i>Mode:</strong>
+                            Onsite &amp; Remote</p>
+                        <p><strong><i class="fas fa-globe me-2" style="color:var(--accent)"></i>Focus:</strong> SDG 4,
+                            8,
+                            17</p>
+                        <a href="achievements.html#support" class="btn btn-accent rounded-pill w-100 mt-3">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="certificate-note">
+                <i class="fas fa-certificate"></i>
+                <h4>Certificate of Completion</h4>
+                <p>Upon completing 50 hours of volunteering, each participant receives an official Youth For Palestine
+                    certificate — recognizing their contribution, skills, and readiness for the professional world.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 footer-brand">
+                    <span class="footer-logo">YFP</span>
+                    <span class="footer-logo-sub">Youth For Palestine</span>
+                    <p>Empowering Palestinian youth through education, leadership, and real-world opportunities.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 footer-links">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="achievements.html">Achievements</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="achievements.html#support">Support Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 footer-contact">
+                    <h5>Contact Us</h5>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@yfp.org">info@yfp.org</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/00000000000" target="_blank"
+                                rel="noopener">+970 000 000 000</a></li>
+                        <li><i class="fas fa-globe"></i> <a href="#">www.reallygreatsite.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <hr>
+                <p>&copy; 2026 Youth For Palestine (YFP). All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

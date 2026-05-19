@@ -681,14 +681,17 @@ section {
 .program-card {
     background: var(--white);
     border-radius: var(--radius);
-    overflow: hidden;
     box-shadow: var(--shadow);
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
 
 .program-card-top {
     height: 220px;
     overflow: hidden;
+    border-radius: var(--radius) var(--radius) 0 0;
 }
 
 .program-card-top img {
@@ -703,7 +706,10 @@ section {
 }
 
 .program-card-body {
-    padding: 32px 28px;
+    padding: 36px 32px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .program-card-body h4 {
@@ -718,7 +724,54 @@ section {
     margin-bottom: 20px;
 }
 
+.program-hours {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: auto;
+    margin-bottom: 12px;
+}
+
+.hours-badge,
+.days-badge,
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: #f0f4ff;
+    color: var(--primary);
+}
+
+.hours-badge i,
+.days-badge i,
+.status-badge i {
+    font-size: 0.8rem;
+    color: var(--accent);
+}
+
+.status-badge.onsite {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.status-badge.hybrid {
+    background: #fff3e0;
+    color: #e65100;
+}
+
+.status-badge.onsite i,
+.status-badge.hybrid i {
+    color: inherit;
+}
+
 .program-link {
+    position: absolute;
+    bottom: 15px;
+    left: 28px;
     color: var(--accent);
     font-weight: 600;
     font-size: 0.95rem;
@@ -842,31 +895,60 @@ section {
 .focus-card {
     background: var(--white);
     border-radius: var(--radius);
-    padding: 36px 28px;
+    overflow: hidden;
     box-shadow: var(--shadow);
     height: 100%;
+}
+
+.focus-card-top {
+    height: 350px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.focus-card-top img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.focus-card-top.sdg-17-bg {
+    background-color: #19486A;
+}
+
+.focus-card-body {
+    padding: 28px 24px;
 }
 
 .focus-icon-box {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.focus-icon-box span {
     color: #fff;
     font-family: var(--font-heading);
     font-weight: 700;
-    font-size: 0.8rem;
-    padding: 8px 18px;
-    border-radius: 6px;
-    margin-bottom: 22px;
+    font-size: 0.75rem;
+    text-align: center;
+    line-height: 1.2;
 }
 
-.focus-card h4 {
+.focus-icon-box.sdg-17 {
+    background-color: #19486A;
+}
+
+.focus-card-body h4 {
     font-size: 1.3rem;
     margin-bottom: 14px;
     color: var(--primary);
 }
 
-.focus-card p {
+.focus-card-body p {
     color: var(--text-light);
     font-size: 0.95rem;
     margin-bottom: 0;
@@ -1232,6 +1314,19 @@ footer {
     .about-us-experience {
         right: 0;
     }
+
+    .focus-card-top {
+        height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f0f4ff;
+    }
+
+    .focus-card-top img {
+        object-fit: contain;
+        padding: 12px;
+    }
 }
 
 /* Mobile */
@@ -1339,6 +1434,19 @@ footer {
 
     .footer-brand p {
         max-width: 100%;
+    }
+
+    .focus-card-top {
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f0f4ff;
+    }
+
+    .focus-card-top img {
+        object-fit: contain;
+        padding: 10px;
     }
 
     .involved-card {
