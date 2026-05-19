@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Abd Alrahman — YFP Global Ambassador Success Story">
+    <title>Abd Alrahman — Success Story | Youth For Palestine</title>
+    <link rel="icon" type="image/png" href="images/logo_without_bg.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .student-hero {
+            background: linear-gradient(135deg, #1B3A6B 0%, #2a5298 100%);
+            color: #fff;
+            padding: 140px 0 80px;
+        }
+
+        .student-hero .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 600;
+            margin-bottom: 40px;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .student-hero .back-link:hover {
+            color: #fff;
+        }
+
+        .student-profile {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .student-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: top center;
+            border: 5px solid rgba(255, 255, 255, 0.25);
+            flex-shrink: 0;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .student-info h1 {
+            color: #fff;
+            font-size: 2.6rem;
+            margin-bottom: 10px;
+        }
+
+        .student-info .badge {
+            font-size: 0.9rem;
+            padding: 8px 20px;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.18);
+            font-weight: 500;
+            display: inline-block;
+        }
+
+        .student-info .student-meta {
+            margin-top: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .student-info .meta-tag {
+            background: rgba(255, 255, 255, 0.12);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .detail-section {
+            padding: 60px 0;
+        }
+
+        .detail-section h3 {
+            color: var(--primary);
+            margin-bottom: 18px;
+            font-size: 1.6rem;
+        }
+
+        .story-content {
+            font-size: 1.05rem;
+            color: var(--text);
+            line-height: 1.9;
+        }
+
+        .story-content p {
+            margin-bottom: 16px;
+        }
+
+        .courses-taken {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .courses-taken li {
+            padding: 16px 20px;
+            background: var(--surface);
+            border-radius: 10px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.95rem;
+        }
+
+        .courses-taken li i {
+            color: var(--accent);
+            font-size: 1.1rem;
+        }
+
+        .quote-block {
+            background: #fff8f0;
+            border-left: 5px solid var(--accent);
+            padding: 28px 32px;
+            border-radius: 0 var(--radius) var(--radius) 0;
+            margin: 32px 0;
+            font-size: 1.2rem;
+            color: var(--primary);
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        .back-bottom {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 767px) {
+            .student-profile {
+                flex-direction: column;
+                text-align: center;
+                gap: 24px;
+            }
+
+            .student-img {
+                width: 150px;
+                height: 150px;
+            }
+
+            .student-info h1 {
+                font-size: 2rem;
+            }
+
+            .student-info .student-meta {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="logo-yfp"><img src="images/logo_without_bg.png" alt="YFP Logo"></span>
+                <span class="logo-sub">Youth For Palestine</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="achievements.html">Achievements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
+                </ul>
+                <a href="partner.html" class="btn btn-accent rounded-pill">Become a Partner</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="student-hero">
+        <div class="container">
+            <a href="achievements.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Success Stories</a>
+            <div class="student-profile">
+                <img src="images/success1.jpeg" alt="Abd Alrahman" class="student-img">
+                <div class="student-info">
+                    <h1>Abd Alrahman</h1>
+                    <span class="badge">Global Ambassador</span>
+                    <div class="student-meta">
+                        <span class="meta-tag"><i class="fas fa-graduation-cap"></i> YFP Graduate</span>
+                        <span class="meta-tag"><i class="fas fa-globe"></i> Theirworld Ambassador</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story -->
+    <section class="detail-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h3>My Journey with YFP</h3>
+                    <div class="story-content">
+                        <p>Building a strong leadership personality and developing my skills in persuasion and
+                            communication in a clear and impactful way. Through YFP's programs, I learned how to present
+                            my ideas with confidence and engage audiences effectively.</p>
+                        <p>Diplomacy also helped me resolve conflicts calmly and build relationships based on respect
+                            and
+                            understanding. The simulations and real-world scenarios pushed me to think critically and
+                            act
+                            strategically in every situation.</p>
+                    </div>
+
+                    <div class="quote-block">
+                        "Start today, because every minute that passes will never come back again."
+                    </div>
+
+                    <h3>Courses Taken at YFP</h3>
+                    <ul class="courses-taken">
+                        <li><i class="fas fa-check-circle"></i> Public Speaking &amp; Diplomacy Simulation</li>
+                        <li><i class="fas fa-check-circle"></i> Leadership &amp; Confidence Development</li>
+                        <li><i class="fas fa-check-circle"></i> Negotiation &amp; Persuasion Skills</li>
+                        <li><i class="fas fa-check-circle"></i> Critical Thinking &amp; Analysis</li>
+                    </ul>
+
+                    <div class="back-bottom">
+                        <a href="achievements.html" class="btn btn-outline-accent rounded-pill">
+                            <i class="fas fa-arrow-left me-2"></i> Back to Success Stories
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 footer-brand">
+                    <span class="footer-logo">YFP</span>
+                    <span class="footer-logo-sub">Youth For Palestine</span>
+                    <p>Empowering Palestinian youth through education, leadership, and real-world opportunities.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 footer-links">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="achievements.html">Achievements</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="achievements.html#support">Support Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 footer-contact">
+                    <h5>Contact Us</h5>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@yfp.org">info@yfp.org</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/00000000000" target="_blank"
+                                rel="noopener">+970 000 000 000</a></li>
+                        <li><i class="fas fa-globe"></i> <a href="#">www.reallygreatsite.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <hr>
+                <p>&copy; 2026 Youth For Palestine (YFP). All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
