@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="YFP Program Details — Youth For Palestine">
+    <title>Public Speaking &amp; Diplomacy | YFP Programs</title>
+    <link rel="icon" type="image/png" href="images/logo_without_bg.png">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .program-hero {
+            background: linear-gradient(135deg, #1B3A6B 0%, #2a5298 100%);
+            color: #fff;
+            padding: 120px 0 80px;
+        }
+
+        .program-hero h1 {
+            color: #fff;
+            font-size: 2.8rem;
+            margin-bottom: 16px;
+        }
+
+        .program-hero .lead {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1.15rem;
+        }
+
+        .program-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .meta-item {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 12px 20px;
+            border-radius: 50px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            backdrop-filter: blur(10px);
+        }
+
+        .meta-item i {
+            color: var(--accent);
+        }
+
+        .detail-section {
+            padding: 80px 0;
+        }
+
+        .detail-section h3 {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+            position: relative;
+            padding-bottom: 12px;
+        }
+
+        .detail-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        .skill-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px;
+        }
+
+        .skill-list li {
+            padding: 14px 18px;
+            background: var(--surface);
+            border-radius: 10px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .skill-list li i {
+            color: var(--accent);
+        }
+
+        .highlight-box {
+            background: #fff8f0;
+            border-left: 4px solid var(--accent);
+            padding: 24px 28px;
+            border-radius: 0 var(--radius) var(--radius) 0;
+            margin: 28px 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+        }
+
+        .sdg-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        .sdg-item {
+            text-align: center;
+            padding: 20px 12px;
+            background: var(--surface);
+            border-radius: var(--radius);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .sdg-item .sdg-num {
+            display: block;
+            font-size: 1.8rem;
+            font-family: var(--font-heading);
+            font-weight: 900;
+            margin-bottom: 6px;
+        }
+
+        .outcome-box {
+            background: #f0f4ff;
+            border-radius: var(--radius);
+            padding: 24px 28px;
+            margin: 28px 0;
+        }
+
+        .certificate-note {
+            background: #e8f5e9;
+            border-radius: var(--radius);
+            padding: 28px 32px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .certificate-note i {
+            font-size: 2.5rem;
+            color: #2e7d32;
+            margin-bottom: 12px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 40px;
+        }
+
+        .back-link:hover {
+            color: var(--accent);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ==================== NAVBAR ==================== -->
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="logo-yfp"><img src="images/logo_without_bg.png" alt="YFP Logo"></span>
+                <span class="logo-sub">Youth For Palestine</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="programs.html">Programs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="achievements.html">Achievements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
+                </ul>
+                <a href="partner.html" class="btn btn-accent rounded-pill">Become a Partner</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="program-hero">
+        <div class="container">
+            <a href="programs.html" class="back-link" style="color:rgba(255,255,255,0.7)">
+                <i class="fas fa-arrow-left"></i> Back to Programs
+            </a>
+            <span class="section-tag" style="color:rgba(255,255,255,0.7)">Core Program</span>
+            <h1>Public Speaking &amp; Diplomacy Simulation</h1>
+            <p class="lead">An immersive English-speaking environment designed to build the soft skills and strategic
+                thinking today's youth need to lead with confidence.</p>
+            <div class="program-meta">
+                <div class="meta-item"><i class="fas fa-clock"></i> 24 Hours Total</div>
+                <div class="meta-item"><i class="fas fa-calendar-alt"></i> 3 Weeks</div>
+                <div class="meta-item"><i class="fas fa-map-marker-alt"></i> Onsite</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== DETAILS ==================== -->
+    <section class="detail-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h3>Program Overview</h3>
+                    <p>This intensive program focuses on critical areas that many young people lack access to — blending
+                        soft-skill development with hands-on practice in a fully English-speaking environment. Students
+                        are immersed in real-world simulations that push them to think critically, communicate
+                        powerfully, and lead effectively.</p>
+                    <p>The program runs for <strong>3 weeks</strong>, totaling <strong>24 hours</strong> of immersive,
+                        on-site training. Every session is conducted entirely in English, creating natural pressure that
+                        accelerates fluency and builds the confidence to speak professionally in any setting.</p>
+
+                    <div class="highlight-box">
+                        <p><strong>Immersive English Environment:</strong> All sessions, discussions, and simulations
+                            are conducted in English — placing students in a high-expectation setting where fluency
+                            becomes a necessity, not an option.</p>
+                    </div>
+
+                    <h3 class="mt-5">Skills You Will Gain</h3>
+                    <ul class="skill-list">
+                        <li><i class="fas fa-check-circle"></i> Soft Skills</li>
+                        <li><i class="fas fa-check-circle"></i> Critical Analysis</li>
+                        <li><i class="fas fa-check-circle"></i> Critical Thinking</li>
+                        <li><i class="fas fa-check-circle"></i> Project Management</li>
+                        <li><i class="fas fa-check-circle"></i> Entrepreneurship</li>
+                        <li><i class="fas fa-check-circle"></i> Building Your Own Business</li>
+                        <li><i class="fas fa-check-circle"></i> Negotiation &amp; Persuasion</li>
+                        <li><i class="fas fa-check-circle"></i> Communication Skills</li>
+                        <li><i class="fas fa-check-circle"></i> Confidence Building</li>
+                        <li><i class="fas fa-check-circle"></i> English for Professional Fields</li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card p-4 shadow-sm" style="border-radius:var(--radius);position:sticky;top:100px;">
+                        <h5 style="color:var(--primary)">Quick Facts</h5>
+                        <hr>
+                        <p><strong><i class="fas fa-clock me-2" style="color:var(--accent)"></i>Duration:</strong> 24
+                            Hours</p>
+                        <p><strong><i class="fas fa-calendar-alt me-2"
+                                    style="color:var(--accent)"></i>Schedule:</strong> 3 Weeks</p>
+                        <p><strong><i class="fas fa-map-marker-alt me-2" style="color:var(--accent)"></i>Mode:</strong>
+                            Onsite</p>
+                        <p><strong><i class="fas fa-language me-2" style="color:var(--accent)"></i>Language:</strong>
+                            English</p>
+                        <a href="achievements.html#support" class="btn btn-accent rounded-pill w-100 mt-3">Enroll
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="certificate-note">
+                <i class="fas fa-certificate"></i>
+                <h4>Certificate of Completion</h4>
+                <p>Upon successful completion of this program, each participant will receive an official certificate
+                    from Youth For Palestine, recognizing their achievement and newly acquired skills.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 footer-brand">
+                    <span class="footer-logo">YFP</span>
+                    <span class="footer-logo-sub">Youth For Palestine</span>
+                    <p>Empowering Palestinian youth through education, leadership, and real-world opportunities.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 footer-links">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="achievements.html">Achievements</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="achievements.html#support">Support Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 footer-contact">
+                    <h5>Contact Us</h5>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@yfp.org">info@yfp.org</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/00000000000" target="_blank"
+                                rel="noopener">+970 000 000 000</a></li>
+                        <li><i class="fas fa-globe"></i> <a href="#">www.reallygreatsite.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <hr>
+                <p>&copy; 2026 Youth For Palestine (YFP). All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- jQuery & Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

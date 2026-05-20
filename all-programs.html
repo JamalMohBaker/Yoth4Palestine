@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="YFP All Programs — Explore all our programs: Public Speaking, English, Volunteering and more.">
+    <title>All Programs | Youth For Palestine</title>
+    <link rel="icon" type="image/png" href="images/logo_without_bg.png">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .programs-hero {
+            background: linear-gradient(135deg, #1B3A6B 0%, #2a5298 100%);
+            color: #fff;
+            padding: 120px 0 60px;
+            text-align: center;
+        }
+
+        .programs-hero h1 {
+            color: #fff;
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+        }
+
+        .programs-hero .lead {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.1rem;
+        }
+
+        .pagination-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .page-link {
+            color: var(--primary);
+            border-radius: 8px;
+            margin: 0 3px;
+            border: 1px solid #ddd;
+            padding: 10px 18px;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .page-link:hover {
+            background: var(--accent);
+            color: #fff;
+            border-color: var(--accent);
+        }
+
+        .page-item.active .page-link {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: #fff;
+        }
+
+        /* Program card (matching programs.html design) */
+        .program-card-all {
+            background: #fff;
+            border-radius: var(--radius);
+            overflow: hidden;
+            height: 100%;
+            transition: var(--transition);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+        }
+
+        .program-card-all:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .program-card-all .card-img-top {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .program-card-all .card-body {
+            padding: 24px 20px 20px;
+            display: flex;
+            flex-direction: column;
+            min-height: 200px;
+        }
+
+        .program-card-all h4 {
+            font-size: 1.15rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-family: var(--font-heading);
+        }
+
+        .program-card-all p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            flex-grow: 1;
+            margin-bottom: 14px;
+        }
+
+        .program-card-all .hours-badge,
+        .program-card-all .status-badge {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 500;
+            padding: 5px 12px;
+            border-radius: 50px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+
+        .program-card-all .hours-badge {
+            background: #eef2ff;
+            color: var(--primary);
+        }
+
+        .program-card-all .status-badge.onsite {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .program-card-all .status-badge.hybrid {
+            background: #fff3e0;
+            color: #e65100;
+        }
+
+        .program-card-all .read-link {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-top: auto;
+        }
+
+        .program-card-all .read-link:hover {
+            color: #d0700f;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ==================== NAVBAR ==================== -->
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="logo-yfp"><img src="images/logo_without_bg.png" alt="YFP Logo"></span>
+                <span class="logo-sub">Youth For Palestine</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="programs.html">Programs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="achievements.html">Achievements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
+                </ul>
+                <a href="partner.html" class="btn btn-accent rounded-pill">Become a Partner</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="programs-hero">
+        <div class="container">
+            <span class="section-tag" style="color:rgba(255,255,255,0.7)">What We Offer</span>
+            <h1>All Programs</h1>
+            <p class="lead">Explore every program — from public speaking to volunteering. Find the one that fits your
+                journey.</p>
+        </div>
+    </section>
+
+    <!-- ==================== PROGRAMS GRID ==================== -->
+    <section id="allPrograms" style="padding:60px 0">
+        <div class="container">
+            <div class="row g-4" id="programsContainer">
+                <!-- Programs loaded via JS -->
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination-wrapper">
+                <nav>
+                    <ul class="pagination" id="pagination">
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 footer-brand">
+                    <span class="footer-logo">YFP</span>
+                    <span class="footer-logo-sub">Youth For Palestine</span>
+                    <p>Empowering Palestinian youth through education, leadership, and real-world opportunities.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 footer-links">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="achievements.html">Achievements</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="all-programs.html">All Programs</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 footer-contact">
+                    <h5>Contact Us</h5>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@yfp.org">info@yfp.org</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/00000000000" target="_blank"
+                                rel="noopener">+970 000 000 000</a></li>
+                        <li><i class="fas fa-globe"></i> <a href="#">www.reallygreatsite.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <hr>
+                <p>&copy; 2026 Youth For Palestine (YFP). All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- jQuery & Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        // ===========================
+        // Programs Data
+        // ===========================
+        const programs = [
+            {
+                title: "Public Speaking & Diplomacy Simulation",
+                desc: "Communication, leadership, negotiation, and confidence building through interactive training.",
+                img: "images/o1.jpeg",
+                hours: "24 Hours",
+                mode: "Onsite",
+                modeClass: "onsite",
+                link: "program-detail.html"
+            },
+            {
+                title: "Training Courses & Educational Programs",
+                desc: "English courses, project management, entrepreneurship, and professional development workshops.",
+                img: "images/o2.jpeg",
+                hours: "30 Hours",
+                mode: "Onsite & Online",
+                modeClass: "hybrid",
+                link: "program-detail.html"
+            },
+            {
+                title: "Volunteering Program",
+                desc: "Skilled students become mentors and trainers, beginning their own professional journey while helping others.",
+                img: "images/o3.jpeg",
+                hours: "50 Hours",
+                mode: "Onsite & Remote",
+                modeClass: "hybrid",
+                link: "program-detail.html"
+            }
+        ];
+
+        const itemsPerPage = 6;
+        let currentPage = 1;
+        const totalPages = Math.ceil(programs.length / itemsPerPage);
+
+        function renderPrograms(page) {
+            const container = document.getElementById('programsContainer');
+            const start = (page - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+            const pagePrograms = programs.slice(start, end);
+
+            container.innerHTML = pagePrograms.map(p => `
+                <div class="col-lg-4 col-md-6 reveal">
+                    <div class="program-card-all">
+                        <img src="${p.img}" alt="${p.title}" class="card-img-top">
+                        <div class="card-body">
+                            <h4>${p.title}</h4>
+                            <p>${p.desc}</p>
+                            <div>
+                                <span class="hours-badge"><i class="fas fa-clock"></i> ${p.hours}</span>
+                                <span class="status-badge ${p.modeClass}"><i class="fas fa-map-marker-alt"></i> ${p.mode}</span>
+                            </div>
+                            <a href="${p.link}" class="read-link mt-2 d-inline-block">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+
+            // Trigger reveal animation
+            setTimeout(() => {
+                document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+            }, 100);
+        }
+
+        function renderPagination() {
+            const pagination = document.getElementById('pagination');
+            let html = '';
+
+            html += `<li class="page-item ${currentPage === 1 ? 'disabled' : ''}">
+                <a class="page-link" href="#" onclick="goToPage(${currentPage - 1}); return false;"><i class="fas fa-chevron-left"></i></a>
+            </li>`;
+
+            for (let i = 1; i <= totalPages; i++) {
+                html += `<li class="page-item ${i === currentPage ? 'active' : ''}">
+                    <a class="page-link" href="#" onclick="goToPage(${i}); return false;">${i}</a>
+                </li>`;
+            }
+
+            html += `<li class="page-item ${currentPage === totalPages ? 'disabled' : ''}">
+                <a class="page-link" href="#" onclick="goToPage(${currentPage + 1}); return false;"><i class="fas fa-chevron-right"></i></a>
+            </li>`;
+
+            pagination.innerHTML = html;
+        }
+
+        function goToPage(page) {
+            if (page < 1 || page > totalPages) return;
+            currentPage = page;
+            renderPrograms(page);
+            renderPagination();
+            window.scrollTo({ top: 400, behavior: 'smooth' });
+        }
+
+        // Init
+        renderPrograms(1);
+        renderPagination();
+    </script>
+</body>
+
+</html>
